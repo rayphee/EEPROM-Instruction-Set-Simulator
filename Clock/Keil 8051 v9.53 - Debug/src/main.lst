@@ -1,14 +1,14 @@
-C51 COMPILER V9.53.0.0   MAIN                                                              03/27/2017 18:37:00 PAGE 1   
+C51 COMPILER V9.53.0.0   MAIN                                                              03/27/2017 18:59:20 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE MAIN
 OBJECT MODULE PLACED IN .\src/main.OBJ
 COMPILER INVOKED BY: Z:\Applications\Simplicity Studio.app\Contents\Eclipse\developer\toolchains\keil_8051\9.53\BIN\C51.
-                    -exe /Users/rafi/SimplicityStudio/v4_workspace/Clock/src/main.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(2) 
-                    -FLOATFUZZY(3) OPTIMIZE(8,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(/Applications/Simplicity Studio.app/
-                    -Contents/Eclipse/developer/sdks/8051/v4.0.3//Device/shared/si8051base;/Applications/Simplicity Studio.app/Contents/Eclip
-                    -se/developer/sdks/8051/v4.0.3//Device/EFM8BB3/inc) PRINT(.\src/main.lst) COND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src
-                    -/main.OBJ)
+                    -exe /Users/rafi/Documents/Code/ECE-251-A/ece251a-project1/Clock/src/main.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARN
+                    -INGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(8,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(/Applications/Simplicity
+                    - Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//Device/shared/si8051base;/Applications/Simplicity Studio.app/Co
+                    -ntents/Eclipse/developer/sdks/8051/v4.0.3//Device/EFM8BB3/inc) PRINT(.\src/main.lst) COND PAGEWIDTH(120) PAGELENGTH(65) 
+                    -OBJECT(.\src/main.OBJ)
 
 line level    source
 
@@ -63,18 +63,11 @@ line level    source
   49   2                              P1_B6 = 1;
   50   2                              fakeassdelay();
   51   2                              P1_B6 = 0;
-C51 COMPILER V9.53.0.0   MAIN                                                              03/27/2017 18:37:00 PAGE 2   
+C51 COMPILER V9.53.0.0   MAIN                                                              03/27/2017 18:59:20 PAGE 2   
 
   52   2                              fakeassdelay();
   53   2              }
   54   1      }
-  55          
-  56          
-  57          
-  58          
-  59          
-  60          
-  61          //hay raffi sexy mama
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE

@@ -52,10 +52,3 @@ int main (void)
 			fakeassdelay();
 	}
 }
-
-
-
-
-
-
-//hay raffi sexy mama

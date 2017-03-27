@@ -17,6 +17,7 @@
 // Simplicity Launcher and click on "Data Sheet".
 //
 //-----------------------------------------------------------------------------
+
 int main (void)
 {
 	while (1) {}                             // Spin forever

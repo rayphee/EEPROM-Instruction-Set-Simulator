@@ -1,4 +1,4 @@
-LX51 LINKER/LOCATER V4.66.30.0                                                          03/27/2017  18:37:01  PAGE 1
+LX51 LINKER/LOCATER V4.66.30.0                                                          03/27/2017  18:59:21  PAGE 1
 
 
 LX51 LINKER/LOCATER V4.66.30.0, INVOKED BY:
@@ -64,7 +64,7 @@ FUNCTION/MODULE              BIT_GROUP   DATA_GROUP
   +--> MAIN/MAIN
   +--> ?C_INITSEG
 
-LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:37:01  PAGE 2
+LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:59:21  PAGE 2
 
 
 MAIN/MAIN                   ----- -----  ----- -----
@@ -129,7 +129,7 @@ PUBLIC SYMBOLS OF MODULE:  CLOCK.OMF.CRBUILD (MAIN)
 *SFR* 000000F0H.2 DATA     BIT       B_B2
 *SFR* 000000F0H.3 DATA     BIT       B_B3
 *SFR* 000000F0H.4 DATA     BIT       B_B4
-LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:37:01  PAGE 3
+LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:59:21  PAGE 3
 
 
 *SFR* 000000F0H.5 DATA     BIT       B_B5
@@ -194,7 +194,7 @@ PUBLIC SYMBOLS OF MODULE:  CLOCK.OMF.CRBUILD (MAIN)
 *SFR* 0000008EH   DATA     BYTE      DAC3H
 *SFR* 0000008DH   DATA     BYTE      DAC3L
 *SFR* 00000088H   DATA     BYTE      DACGCF0
-LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:37:01  PAGE 4
+LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:59:21  PAGE 4
 
 
 *SFR* 00000088H.3 DATA     BIT       DACGCF0_D01REFSL
@@ -259,7 +259,7 @@ PUBLIC SYMBOLS OF MODULE:  CLOCK.OMF.CRBUILD (MAIN)
 *SFR* 000000E4H   DATA     BYTE      IT01CF
 *SFR* 000000B1H   DATA     BYTE      LFO0CN
       0100088CH   CODE     ---       main
-LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:37:01  PAGE 5
+LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:59:21  PAGE 5
 
 
 *SFR* 00000080H   DATA     BYTE      P0
@@ -324,7 +324,7 @@ PUBLIC SYMBOLS OF MODULE:  CLOCK.OMF.CRBUILD (MAIN)
 *SFR* 000000D8H.5 DATA     BIT       PCA0CN0_CCF5
 *SFR* 000000D8H.7 DATA     BIT       PCA0CN0_CF
 *SFR* 000000D8H.6 DATA     BIT       PCA0CN0_CR
-LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:37:01  PAGE 6
+LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:59:21  PAGE 6
 
 
 *SFR* 000000FBH   DATA     WORD      PCA0CP0
@@ -389,7 +389,7 @@ PUBLIC SYMBOLS OF MODULE:  CLOCK.OMF.CRBUILD (MAIN)
 *SFR* 00000098H.3 DATA     BIT       SCON0_TB8
 *SFR* 00000098H.1 DATA     BIT       SCON0_TI
 *SFR* 000000C8H   DATA     BYTE      SCON1
-LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:37:01  PAGE 7
+LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:59:21  PAGE 7
 
 
 *SFR* 000000C8H.7 DATA     BIT       SCON1_OVR
@@ -454,7 +454,7 @@ PUBLIC SYMBOLS OF MODULE:  CLOCK.OMF.CRBUILD (MAIN)
 *SFR* 00000089H   DATA     BYTE      TMOD
 *SFR* 000000CEH   DATA     WORD      TMR2
 *SFR* 000000C8H   DATA     BYTE      TMR2CN0
-LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:37:01  PAGE 8
+LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:59:21  PAGE 8
 
 
 *SFR* 000000C8H.3 DATA     BIT       TMR2CN0_T2SPLIT
@@ -519,7 +519,7 @@ PUBLIC SYMBOLS OF MODULE:  CLOCK.OMF.CRBUILD (MAIN)
 *SFR* 000000D8H.1 DATA     BIT       UART1FCN1_RXTO0
 *SFR* 000000D8H.2 DATA     BIT       UART1FCN1_RXTO1
 *SFR* 000000D8H.7 DATA     BIT       UART1FCN1_TFRQ
-LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:37:01  PAGE 9
+LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:59:21  PAGE 9
 
 
 *SFR* 000000D8H.4 DATA     BIT       UART1FCN1_TIE
@@ -584,7 +584,7 @@ SYMBOL TABLE OF MODULE:  CLOCK.OMF.CRBUILD (MAIN)
       00000098H.2 SFRSYM    DATA     BIT       SCON0_RB8
       000000CAH   SFRSYM    DATA     BYTE      TMR2RLL
       000000FCH   SFRSYM    DATA     BYTE      PCA0CPH0
-LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:37:01  PAGE 10
+LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:59:21  PAGE 10
 
 
       00000092H   SFRSYM    DATA     BYTE      TMR3RLL
@@ -649,7 +649,7 @@ SYMBOL TABLE OF MODULE:  CLOCK.OMF.CRBUILD (MAIN)
       0000008EH   SFRSYM    DATA     BYTE      CKCON0
       000000E0H.1 SFRSYM    DATA     BIT       ACC_ACC1
       000000C9H   SFRSYM    DATA     BYTE      REG0CN
-LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:37:01  PAGE 11
+LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:59:21  PAGE 11
 
 
       000000CAH   SFRSYM    DATA     BYTE      CRC0IN
@@ -714,7 +714,7 @@ SYMBOL TABLE OF MODULE:  CLOCK.OMF.CRBUILD (MAIN)
       00000095H   SFRSYM    DATA     BYTE      SBRLL1
       000000C8H.2 SFRSYM    DATA     BIT       SCON1_RBX
       00000091H   SFRSYM    DATA     BYTE      DAC0CF0
-LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:37:01  PAGE 12
+LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:59:21  PAGE 12
 
 
       000000BCH   SFRSYM    DATA     BYTE      ADC0CF0
@@ -779,7 +779,7 @@ SYMBOL TABLE OF MODULE:  CLOCK.OMF.CRBUILD (MAIN)
       00000088H.2 SFRSYM    DATA     BIT       DACGCF0_D1AMEN
       0000008CH   SFRSYM    DATA     BYTE      DAC2H
       0000008EH   SFRSYM    DATA     BYTE      DAC3H
-LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:37:01  PAGE 13
+LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:59:21  PAGE 13
 
 
       00000088H.6 SFRSYM    DATA     BIT       DACGCF0_D3AMEN
@@ -844,7 +844,7 @@ SYMBOL TABLE OF MODULE:  CLOCK.OMF.CRBUILD (MAIN)
       00000080H.2 SFRSYM    DATA     BIT       P0_B2
       000000BFH   SFRSYM    DATA     BYTE      CMP1CN0
       00000099H   SFRSYM    DATA     BYTE      CMP0CN1
-LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:37:01  PAGE 14
+LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:59:21  PAGE 14
 
 
       00000088H.3 SFRSYM    DATA     BIT       TCON_IE1
@@ -909,7 +909,7 @@ SYMBOL TABLE OF MODULE:  CLOCK.OMF.CRBUILD (MAIN)
       00000088H   SFRSYM    DATA     BIT       TCON_IT0
       000000C8H.1 SFRSYM    DATA     BIT       SCON1_TI
       000000EFH   SFRSYM    DATA     BYTE      RSTSRC
-LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:37:01  PAGE 15
+LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:59:21  PAGE 15
 
 
       000000FDH   SFRSYM    DATA     BYTE      P0MAT
@@ -974,7 +974,7 @@ SYMBOL TABLE OF MODULE:  CLOCK.OMF.CRBUILD (MAIN)
       000000A3H   SFRSYM    DATA     BYTE      SPI0DAT
       000000ADH   SFRSYM    DATA     BYTE      I2C0FCN0
       000000F8H.3 SFRSYM    DATA     BIT       SPI0CN0_NSSMD1
-LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:37:01  PAGE 16
+LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:59:21  PAGE 16
 
 
       000000BDH   SFRSYM    DATA     WORD      ADC0
@@ -1039,7 +1039,7 @@ SYMBOL TABLE OF MODULE:  CLOCK.OMF.CRBUILD (MAIN)
       01000847H   PUBLIC    CODE     ---       ?C_START
 
 ******************************************************************************
-LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:37:01  PAGE 17
+LX51 LINKER/LOCATER V4.66.30.0                                                        03/27/2017  18:59:21  PAGE 17
 
 
 * RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0064H BYTE ( 4%) *
