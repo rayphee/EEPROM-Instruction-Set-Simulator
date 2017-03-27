@@ -17,6 +17,7 @@
 // Simplicity Launcher and click on "Data Sheet".
 //
 //-----------------------------------------------------------------------------
+#include "InitDevice.c";
 void writeOpcodePin0(bool);
 void writeOpcodePin1(bool);
 void writeParamPin0(bool);
@@ -26,6 +27,35 @@ void writeParamPin3(bool);
 void writeClockPin(bool);
 void delayBS(int);
 
+int delayvalue = 4500;
+
+void delayBS(){
+	int i = 0;
+	for(i=0;i<=delayvalue;i++){
+
+	}
+}
+void writeParamPin0(bool i){
+	P3_B1 = i;
+}
+void writeParamPin1(bool i){
+	P3_B2 = i;
+}
+void writeParamPin2(bool i){
+	P3_B3 = i;
+}
+void writeParamPin3(bool i){
+	P3_B4 = i;
+}
+void writeOpCodePin0(bool i){
+	P2_B4 = i;
+}
+void writeOpCodePin1(bool i){
+	P2_B5 = i;
+}
+void writeClockPin(bool i){
+	P1_B6 = i;
+}
 void issueInstruction(char opcode, char param){
 	delayBS(4500);
 	writeClockPin(false);
@@ -38,13 +68,11 @@ void issueInstruction(char opcode, char param){
 	writeParamPin3(param & 8);
 	delayBS(2250);
 	writeClockPin(true);
+	delayBS(4500);
+	writeClockPin(false);
+	delayBS(4500);
+	writeClockPin(true);
 }
-
-// What is your ISA?
-// 0x00 - GROUND
-// 0x01 - OR
-// 0x02 - AND
-// 0x03 - ADD
 
 void main(){
 	issueInstruction(0x00, 0x00); // acc now 0x00
