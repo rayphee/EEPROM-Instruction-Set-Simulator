@@ -41,11 +41,11 @@ void writeParamPin3(bool i) {
 }
 void writeOpcodePin0(bool i) {
 	P2_B4 = i;
-	P1_B4 = i;
+	//P1_B4 = i;
 }
 void writeOpcodePin1(bool i) {
 	P2_B5 = i;
-	P1_B5 = i;
+	//P1_B5 = i;
 }
 void writeClockPin(bool i) {
 	P1_B6 = i;
@@ -68,6 +68,7 @@ void issueInstruction(char opcode, char param) {
 	writeClockPin(true);
 }
 int main(void) {
+	int i;
 	// Call hardware initialization routine
 	enter_DefaultMode_from_RESET();
 	XBR2 |= 0x40;
@@ -75,15 +76,24 @@ int main(void) {
 		if (!P0_B2) {
 			delayconstant = delayconstant + 1000;
 			P1_B4 = 0;
+			P0_B2 = 1;
 		} else if (!P0_B3) {
 			delayconstant = delayconstant - 1000;
 			P1_B5 = 0;
+			P0_B3 = 1;
 		}
-		issueInstruction(0x00, 0x00); // acc now 0x00
-		issueInstruction(0x03, 0x01); // acc now 0x01
-		issueInstruction(0x01, 0x02); // acc now 0x11
-		issueInstruction(0x02, 0x02); // acc now 0x10
-		issueInstruction(0x03, 0x01); // acc now 0x11 (again);
+//		issueInstruction(0x00, 0x00); // acc now 0x00 AND 0		//0
+//		issueInstruction(0x03, 0x01); // acc now 0x01 CONST 1	//0
+//		issueInstruction(0x01, 0x02); // acc now 0x11 OR 2		//2
+//		issueInstruction(0x02, 0x02); // acc now 0x10 PLUS 2	//4
+//		issueInstruction(0x03, 0x01); // acc now 0x11 (again); CONST 1 // 0
+		issueInstruction(0x03, 0x00);
+		issueInstruction(0x01, 0x01);
+		issueInstruction(0x01, 0x02);
+		issueInstruction(0x01, 0x04);
+		issueInstruction(0x01, 0x08);
+		issueInstruction(0x03, 0x00);
+		//for(i = 0; i < 31; i++){issueInstruction(0x02, 0x01);}
 // $[Generated Run-time code]
 // [Generated Run-time code]$
 	}

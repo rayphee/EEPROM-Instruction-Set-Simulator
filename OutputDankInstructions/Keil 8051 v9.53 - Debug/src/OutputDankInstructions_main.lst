@@ -1,4 +1,4 @@
-C51 COMPILER V9.53.0.0   OUTPUTDANKINSTRUCTIONS_MAIN                                       03/27/2017 20:01:38 PAGE 1   
+C51 COMPILER V9.53.0.0   OUTPUTDANKINSTRUCTIONS_MAIN                                       03/27/2017 21:25:32 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE OUTPUTDANKINSTRUCTIONS_MAIN
@@ -56,14 +56,14 @@ line level    source
   41   1      }
   42          void writeOpcodePin0(bool i) {
   43   1              P2_B4 = i;
-  44   1              P1_B4 = i;
+  44   1              //P1_B4 = i;
   45   1      }
   46          void writeOpcodePin1(bool i) {
   47   1              P2_B5 = i;
-  48   1              P1_B5 = i;
+  48   1              //P1_B5 = i;
   49   1      }
   50          void writeClockPin(bool i) {
-C51 COMPILER V9.53.0.0   OUTPUTDANKINSTRUCTIONS_MAIN                                       03/27/2017 20:01:38 PAGE 2   
+C51 COMPILER V9.53.0.0   OUTPUTDANKINSTRUCTIONS_MAIN                                       03/27/2017 21:25:32 PAGE 2   
 
   51   1              P1_B6 = i;
   52   1      }
@@ -85,41 +85,55 @@ line level    source
   68   1              writeClockPin(true);
   69   1      }
   70          int main(void) {
-  71   1              // Call hardware initialization routine
-  72   1              enter_DefaultMode_from_RESET();
-  73   1              XBR2 |= 0x40;
-  74   1              while (1) {
-  75   2                      if (!P0_B2) {
-  76   3                              delayconstant = delayconstant + 1000;
-  77   3                              P1_B4 = 0;
-  78   3                      } else if (!P0_B3) {
-  79   3                              delayconstant = delayconstant - 1000;
-  80   3                              P1_B5 = 0;
-  81   3                      }
-  82   2                      issueInstruction(0x00, 0x00); // acc now 0x00
-  83   2                      issueInstruction(0x03, 0x01); // acc now 0x01
-  84   2                      issueInstruction(0x01, 0x02); // acc now 0x11
-  85   2                      issueInstruction(0x02, 0x02); // acc now 0x10
-  86   2                      issueInstruction(0x03, 0x01); // acc now 0x11 (again);
-  87   2      // $[Generated Run-time code]
-  88   2      // [Generated Run-time code]$
-  89   2              }
-  90   1      }
+  71   1              int i;
+  72   1              // Call hardware initialization routine
+  73   1              enter_DefaultMode_from_RESET();
+  74   1              XBR2 |= 0x40;
+  75   1              while (1) {
+  76   2                      if (!P0_B2) {
+  77   3                              delayconstant = delayconstant + 1000;
+  78   3                              P1_B4 = 0;
+  79   3                              P0_B2 = 1;
+  80   3                      } else if (!P0_B3) {
+  81   3                              delayconstant = delayconstant - 1000;
+  82   3                              P1_B5 = 0;
+  83   3                              P0_B3 = 1;
+  84   3                      }
+  85   2      //              issueInstruction(0x00, 0x00); // acc now 0x00 AND 0             //0
+  86   2      //              issueInstruction(0x03, 0x01); // acc now 0x01 CONST 1   //0
+  87   2      //              issueInstruction(0x01, 0x02); // acc now 0x11 OR 2              //2
+  88   2      //              issueInstruction(0x02, 0x02); // acc now 0x10 PLUS 2    //4
+  89   2      //              issueInstruction(0x03, 0x01); // acc now 0x11 (again); CONST 1 // 0
+  90   2                      issueInstruction(0x03, 0x00);
+  91   2                      issueInstruction(0x01, 0x01);
+  92   2                      issueInstruction(0x01, 0x02);
+  93   2                      issueInstruction(0x01, 0x04);
+  94   2                      issueInstruction(0x01, 0x08);
+  95   2                      issueInstruction(0x03, 0x00);
+  96   2                      //for(i = 0; i < 31; i++){issueInstruction(0x02, 0x01);}
+  97   2      // $[Generated Run-time code]
+  98   2      // [Generated Run-time code]$
+  99   2              }
+ 100   1      }
+*** WARNING C280 IN LINE 71 OF /Users/rafi/Documents/Code/ECE-251-A/ece251a-project1/OutputDankInstructions/src/OutputDa
+             -nkInstructions_main.c: 'i': unreferenced local variable
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    246    ----
+   CODE SIZE        =    250    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =      2    ----
+   DATA SIZE        =      2       2
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----       7
    EDATA SIZE       =   ----    ----
+C51 COMPILER V9.53.0.0   OUTPUTDANKINSTRUCTIONS_MAIN                                       03/27/2017 21:25:32 PAGE 3   
+
    HDATA SIZE       =   ----    ----
    XDATA CONST SIZE =   ----    ----
    FAR CONST SIZE   =   ----    ----
 END OF MODULE INFORMATION.
 
 
-C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)
