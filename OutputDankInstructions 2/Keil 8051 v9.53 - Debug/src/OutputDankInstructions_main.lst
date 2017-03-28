@@ -1,0 +1,126 @@
+C51 COMPILER V9.53.0.0   OUTPUTDANKINSTRUCTIONS_MAIN                                       03/27/2017 19:55:00 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE OUTPUTDANKINSTRUCTIONS_MAIN
+OBJECT MODULE PLACED IN .\src/OutputDankInstructions_main.OBJ
+COMPILER INVOKED BY: Z:\Applications\Simplicity Studio.app\Contents\Eclipse\developer\toolchains\keil_8051\9.53\BIN\C51.
+                    -exe /Users/rafi/SimplicityStudio/v4_workspace/OutputDankInstructions/src/OutputDankInstructions_main.c OMF2 SMALL DEBUG 
+                    -OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(8,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INC
+                    -DIR(/Users/rafi/SimplicityStudio/v4_workspace/OutputDankInstructions/inc;/Applications/Simplicity Studio.app/Contents/Ec
+                    -lipse/developer/sdks/8051/v4.0.3//Device/shared/si8051base;/Applications/Simplicity Studio.app/Contents/Eclipse/develope
+                    -r/sdks/8051/v4.0.3//Device/EFM8BB3/inc) PRINT(.\src/OutputDankInstructions_main.lst) COND PAGEWIDTH(120) PAGELENGTH(65) 
+                    -OBJECT(.\src/OutputDankInstructions_main.OBJ)
+
+line level    source
+
+   1          //-----------------------------------------------------------------------------
+   2          // Includes
+   3          //-----------------------------------------------------------------------------
+   4          #include <SI_EFM8BB3_Register_Enums.h>                  // SFR declarations
+   5          #include "InitDevice.h"
+   6          // $[Generated Includes]
+   7          // [Generated Includes]$
+   8          
+   9          //-----------------------------------------------------------------------------
+  10          // main() Routine
+  11          // ----------------------------------------------------------------------------
+  12          void writeOpcodePin0(bool);
+  13          void writeOpcodePin1(bool);
+  14          void writeParamPin0(bool);
+  15          void writeParamPin1(bool);
+  16          void writeParamPin2(bool);
+  17          void writeParamPin3(bool);
+  18          void writeClockPin(bool);
+  19          void delayBS(int);
+  20          
+  21          int delayconstant = 2250;
+  22          
+  23          void delayBS(int delay) {
+  24   1              int max = delay*delayconstant;
+  25   1              int i = 0;
+  26   1              for (i = 0; i <= max; i++) {
+  27   2      
+  28   2              }
+  29   1      }
+  30          void writeParamPin0(bool i) {
+  31   1              P3_B1 = i;
+  32   1      }
+  33          void writeParamPin1(bool i) {
+  34   1              P3_B2 = i;
+  35   1      }
+  36          void writeParamPin2(bool i) {
+  37   1              P3_B3 = i;
+  38   1      }
+  39          void writeParamPin3(bool i) {
+  40   1              P3_B4 = i;
+  41   1      }
+  42          void writeOpcodePin0(bool i) {
+  43   1              P2_B4 = i;
+  44   1              P1_B4 = i;
+  45   1      }
+  46          void writeOpcodePin1(bool i) {
+  47   1              P2_B5 = i;
+  48   1              P1_B5 = i;
+  49   1      }
+  50          void writeClockPin(bool i) {
+C51 COMPILER V9.53.0.0   OUTPUTDANKINSTRUCTIONS_MAIN                                       03/27/2017 19:55:00 PAGE 2   
+
+  51   1              P1_B6 = i;
+  52   1      }
+  53          void issueInstruction(char opcode, char param) {
+  54   1              delayBS(2);
+  55   1              writeClockPin(false);
+  56   1              delayBS(1);
+  57   1              writeOpcodePin0(opcode & 1);
+  58   1              writeOpcodePin1(opcode & 2);
+  59   1              writeParamPin0(param & 1);
+  60   1              writeParamPin1(param & 2);
+  61   1              writeParamPin2(param & 4);
+  62   1              writeParamPin3(param & 8);
+  63   1              delayBS(1);
+  64   1              writeClockPin(true);
+  65   1              delayBS(2);
+  66   1              writeClockPin(false);
+  67   1              delayBS(2);
+  68   1              writeClockPin(true);
+  69   1      }
+  70          int main(void) {
+  71   1              // Call hardware initialization routine
+  72   1              enter_DefaultMode_from_RESET();
+  73   1              XBR2 |= 0x40;
+  74   1              while (1) {
+  75   2                      if (!P0_B2){
+  76   3                                              delayconstant = delayconstant + 1000;
+  77   3                                              P1_B4 = 0;
+  78   3                                      }
+  79   2                                      else if (!P0_B3){
+  80   3                                              delayconstant = delayconstant - 1000;
+  81   3                                              P1_B5 = 0;
+  82   3                                      }
+  83   2                      issueInstruction(0x00, 0x00); // acc now 0x00
+  84   2                      issueInstruction(0x03, 0x01); // acc now 0x01
+  85   2                      issueInstruction(0x01, 0x02); // acc now 0x11
+  86   2                      issueInstruction(0x02, 0x02); // acc now 0x10
+  87   2                      issueInstruction(0x03, 0x01); // acc now 0x11 (again);
+  88   2      // $[Generated Run-time code]
+  89   2      // [Generated Run-time code]$
+  90   2              }
+  91   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    246    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----       7
+   EDATA SIZE       =   ----    ----
+   HDATA SIZE       =   ----    ----
+   XDATA CONST SIZE =   ----    ----
+   FAR CONST SIZE   =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
